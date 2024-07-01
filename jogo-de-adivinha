@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main (){
+   cout <<"************************************"<< endl;
+   cout <<"* Bem vidos ao jogo da adivinhação *"<< endl;
+   cout <<"************************************"<< endl;
+
+int nuemerosecreto =  6;
+   cout <<"O numero secreto e " << nuemerosecreto <<". Nao conte para niguem!"<< endl;
+}

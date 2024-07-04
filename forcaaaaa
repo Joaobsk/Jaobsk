@@ -1,7 +1,8 @@
-#include<iostream>
-#include<string>
-#include<map>
-#include<vector>
+#include <iostream>
+#include <string>
+#include <map>
+#include <vector>
+#include <fstream>
 using namespace std;
 
 const string PALAVRA = "MELANCIA";
@@ -71,13 +72,29 @@ void chuta(){
         cout << endl;
 }
 
+void le_arquivo(){
+    ifstream arquivo;
+    arquivo.open("palavras.txt");
+
+    int quantidade_palavras;
+    arquivo >> quantidade_palavras;
+
+        cout << "O arquivo possui " << quantidade_palavras << "palavras." << endl;
+
+        for (int i=0;i<quantidade_palavras;i++){
+            string palavra_lida;
+            arquivo >> palavra_lida;
+            cout << "Na linha " << i << " : " << palavra_lida << endl;
+        }
+
+}
+  
 int main(){             
 
-imprieme_cabecalho();
+    imprieme_cabecalho();
+    le_arquivo();
 
-    cout << PALAVRA << endl;
-
-       while(errou() && acertou()){
+        while(errou() && acertou()){
 
         imprime_erros(); 
 
